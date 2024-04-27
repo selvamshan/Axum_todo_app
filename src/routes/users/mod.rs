@@ -2,17 +2,18 @@ use serde::{Deserialize, Serialize};
 
 pub mod create_users;
 pub mod login;
+pub mod logout;
 
 #[derive(Serialize, Deserialize)]
 pub struct ResponseOutUser {
-    data: ResponseUser
+    data: ResponseUser,
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct ResponseUser {
     id: i32,
     username: String,
-    token:String,
+    token: String,
 }
 
 #[derive(Deserialize)]
