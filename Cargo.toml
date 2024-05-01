@@ -24,5 +24,7 @@ dotenvy_macro = "0.15.7"
 jsonwebtoken = "9.3.0"
 chrono = "0.4.38"
 bcrypt = "0.15.1"
+validator = { version = "0.18.1", features = ["derive"] }
+serde_with = "3.8.1"
 
 

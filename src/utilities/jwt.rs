@@ -17,7 +17,7 @@ struct Claims {
 
 pub fn create_token(secret: String, username: String) -> Result<String, AppError> {
     let now = chrono::Utc::now();
-    let exp = (now + Duration::from_secs(300)).timestamp() as usize;
+    let exp = (now + Duration::from_secs(3600)).timestamp() as usize;
     let claims = Claims { exp, username };
     let token_header = Header::default();
     let key = EncodingKey::from_secret(secret.as_bytes());
